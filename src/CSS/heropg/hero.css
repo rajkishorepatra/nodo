@@ -1,0 +1,53 @@
+*{
+    background-color: #fff;
+}
+
+.heropg .home{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 25px;
+    padding: 0;
+}
+
+.home img{
+    margin: 0;
+    width: 39%;
+}
+
+.hero-text h1{
+    font-size: 4.5em;
+    background: -webkit-linear-gradient(pink, darkblue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-text h3{
+    font-size: 1.6em;
+    font-weight: 600;
+    margin-top: 10px;
+    background: -webkit-linear-gradient(darkblue, pink);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.quoteh{
+    font-size: 5rem;
+    margin: 10px;
+    margin-bottom: -12px;
+    display: flex;
+    justify-content: center;
+    background: -webkit-linear-gradient(pink, darkblue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.quote{
+    display: flex;
+    justify-content: space-around;
+}
+
+.quote img{
+    width: 39%;
+}

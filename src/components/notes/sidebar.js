@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import plusicon from'../../img/R.png'
-import delicon from '../../img/del.png'
 import '../../CSS/notes/sidebar.css'
 
 function Sidebar(props) {

@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-import HeroPg from './components/HeroPg'
+// import App from './App';
+import HeroPg from './components/hero pg/HeroPg'
 
 ReactDOM.render(
   <React.StrictMode>

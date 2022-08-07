@@ -1,0 +1,17 @@
+.about{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px;
+    color: rgb(145, 26, 145);
+}
+
+.about img{
+    width: 60%;
+}
+
+.about:nth-child(2) h2{
+    margin-left: 20px;
+}
+
+
