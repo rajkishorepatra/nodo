@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
 import { TbNotes } from 'react-icons/tb'
 import { GiHamburgerMenu } from "react-icons/gi";
-import '../../CSS/common/navbar.css'
+import '../../CSS/common/navbar.css' 
 
 function Navbar() {
     const [showMediaIcons, setShowMediaIcons] = useState(false);
-    return (
+        return (
+       
         <nav className='main-nav'>
             <div className='logo'>
                 <TbNotes color='pink' size={40} />
@@ -21,13 +22,13 @@ function Navbar() {
                 </ul>
 
             </div>
-                <div className='signin-btn'>
+                {/* <div className='signin-btn'>
                     <button className='glow-on-hover'>SignIn/SignUp</button>
-                </div>
+                </div> */}
 
 
 
-            <div className="hamburger-menu">
+            <div className={showMediaIcons ? 'hamburger-menu ham-click' : 'hamburger-menu'}>
                 <a href="#" onClick={() => setShowMediaIcons(!showMediaIcons)}>
                     <GiHamburgerMenu color='darkblue' size={25} />
                 </a>
