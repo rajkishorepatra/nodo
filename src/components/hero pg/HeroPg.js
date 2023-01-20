@@ -15,7 +15,7 @@ function HeroPg() {
 
 
                 <div className='home' id='home'>
-                    <img src={notegif} alt='heroimg' />
+                    <img src={notegif} alt='heroimg'/>
                     <div className='hero-text'>
                         <h1>Welcome to Nodo.</h1>
                         <h3>Your one stop destination for Notes and Todos!</h3>

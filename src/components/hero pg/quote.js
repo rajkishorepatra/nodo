@@ -21,7 +21,7 @@ function Quote() {
       <div class="container">
         <div class="content">
           <h2>{quote.content}</h2>
-          <h3>{quote.author}</h3>
+          <h3>- {quote.author}</h3>
           <button className='button' onClick={fetchData}>Random quote<span></span></button>
         </div>
       </div>

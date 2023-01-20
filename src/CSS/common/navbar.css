@@ -9,8 +9,8 @@ li{
 .main-nav{
     width: 100%;
     display: grid;
-    color: #fff;
-    margin-top: 10px;
+    /* color: #fff; */
+    /* margin-top: 10px; */
     grid-template-columns: 10rem 1fr 2fr 1fr 10rem;
     position: -webkit-sticky; /* Safari */
     position: sticky;
@@ -144,8 +144,8 @@ li{
 
   @media (max-width: 998px) {
     .main-nav {
-      margin-top: -2rem;
-      height: 4rem;
+      /* margin-top: -2rem; */
+      /* height: 100vh; */
       /* background-color: red; */
       grid-template-columns: 5rem 2fr 3fr 2rem 2rem;
     }
@@ -177,9 +177,9 @@ li{
     }
   
     .mobile-menu-link ul {
-      height: 15rem;
+      height: 50vh;
       display: flex;
-      justify-content: space-around;
+      /* justify-content: space-around; */
       flex-direction: column;
       align-items: center;
       background-color: white;
