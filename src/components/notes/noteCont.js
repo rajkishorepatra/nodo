@@ -2,7 +2,7 @@ import React from 'react'
 import Note from './note'
 import '../../CSS/notes/noteCont.css'
 
-function noteCont(props) {
+function NoteCont(props) {
     const revArr=(arr)=>{
         const array=[]
         for (let index = arr.length-1; index >= 0; index--) {
@@ -25,4 +25,4 @@ function noteCont(props) {
     )
 }
 
-export default noteCont;
+export default NoteCont;

@@ -1,6 +1,5 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
-import '../../CSS/heropg/quote.css'
 
 function Quote() {
   const [quote, setQuote] = useState([])
@@ -18,7 +17,7 @@ function Quote() {
   }
   return (
     <>
-      <div class="container">
+      <div class="container mx-auto p-4">
         <div class="content">
           <h2>{quote.content}</h2>
           <h3>- {quote.author}</h3>

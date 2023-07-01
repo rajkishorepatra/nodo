@@ -1,21 +1,12 @@
-*{
-    background-color: #fff;
+.home,.feed{
+    flex-wrap: wrap;
 }
 
-.heropg .home{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-top: 25px;
-    padding: 0;
+.home img,.about img {
+    width: 45vw;
 }
 
-.home img{
-    margin: 0;
-    width: 39%;
-}
-
-.hero-text h1{
+.hero-text h1, .about-h1 {
     font-size: 4.5em;
     background: -webkit-linear-gradient(pink, darkblue);
     -webkit-background-clip: text;
@@ -24,30 +15,90 @@
 
 .hero-text h3{
     font-size: 1.6em;
-    font-weight: 600;
-    margin-top: 10px;
     background: -webkit-linear-gradient(darkblue, pink);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
-.quoteh{
-    font-size: 5rem;
-    margin: 10px;
-    margin-bottom: -12px;
+
+
+
+.container {
     display: flex;
     justify-content: center;
+    /* margin: auto; */
+    width: 70%;
+    height: 40%;
+    background: #f2f2f2;
+    border-radius: 20px;
+    box-shadow: 0 0 35px 8px purple;
+}
+
+.content {
+    text-align: justify;
+    color: black;
+    font-family: 'Merriweather', serif;
+}
+
+.content h2 {
+    font-weight: 900;
+}
+
+.content h3 {
+    font-weight: 300;
+    margin: 5px;
+    text-align: end;
+}
+
+.content button {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    font-size: 1.5em;
+    width: 8em;
+    color: purple;
+    border-radius: 15px;
+    border-color: purple;
+    margin-top: 1em;
+    cursor: pointer;
+}
+
+.content button:hover {
+    background-color: rgb(167, 42, 167);
+    color: #fff;
+}
+
+#about{
+    margin-top: 1.5em;
+    /* font-size: 3.5em;
     background: -webkit-linear-gradient(pink, darkblue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+}
+
+.about-text h2{
+    font-size: 2.4em;
+    background: -webkit-linear-gradient(darkblue, pink);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
-
-.quote{
-    display: flex;
-    justify-content: space-around;
-}
-
-.quote img{
-    width: 39%;
+@media screen and (max-width: 1000px) {
+    .home img, .about img {
+        width: 40vh;
+    }
+    .container{
+        margin: 5em;
+    }
+    .about{
+        flex-wrap: wrap;
+        margin: 2em 0;
+    }
+    .about:nth-child(3){
+        flex-direction: column-reverse;
+    }
+    .about-text h2{
+        text-align: center;
+        font-size: 1.8em;
+    }
 }

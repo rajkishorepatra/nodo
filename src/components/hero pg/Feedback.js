@@ -1,72 +1,57 @@
 import React from 'react';
-import { useForm, ValidationError } from '@formspree/react';
 import feedimg from '../../img/Feedback.gif'
-import '../../CSS/heropg/feedback.css'
+import { Button, Input, Textarea } from '@nextui-org/react';
+import { UserIcon } from '../common/UserIcon';
+import { Mail } from '../common/Mail';
 
 
 function Feedback() {
-    const [state, handleSubmit] = useForm("xzbwpqeb");
-    window.onbeforeunload = () => {
-        for (const form of document.getElementsByTagName('form')) {
-            form.reset();
-        }
-    }
-    if (state.succeeded) {
-        return <p>Thanks for giving ur valuable time! 😉</p>;
-    }
     return (
-        <div className='feed'>
-            <img src={feedimg} alt='Feedback-img' />
-            <form onSubmit={handleSubmit}>
-                {/* <label htmlFor="email">
-                Email Address
-            </label> */}
-                <input 
-                    type="name" 
-                    placeholder="Enter Your Name..." 
-                    id="name" 
-                    Name="name"
-                    className='form-ip'
-                />
-                
-                <ValidationError
-                    prefix="Name"
-                    field="name"
-                    errors={state.errors}
-                />
-                
-                <input
-                    id="email"
-                    type="email"
-                    name="email"
-                    className='form-ip'
-                    placeholder='Enter your Email here...'
-                />
+        <>
+            <h1 className='text-center about-h1 mb-5' id='about'>Contact</h1>
+            <div className='feed d-flex justify-content-around align-items-center m-3'>
+                <img src={feedimg} alt='Feedback-img' />
+                <form>
+                    <div className='d-flex justify-content-center align-items-center m-3 mt-4'>
+                        <Input
+                            clearable
+                            bordered
+                            color="primary"
+                            size="lg"
+                            width='20em'
+                            labelPlaceholder="Your Name"
+                            id="name"
+                            contentLeft={<UserIcon fill="currentColor" />}
+                        />
+                    </div>
 
-                <ValidationError
-                    prefix="Email"
-                    field="email"
-                    errors={state.errors}
-                />
-                
-                <textarea
-                    id="message"
-                    name="message"
-                    className='form-ip'
-                    placeholder='Enter your valuable feedback here...'
-                />
+                    <div className='d-flex justify-content-center align-items-center m-3 mt-5'>
+                        <Input
+                            clearable
+                            bordered
+                            color="primary"
+                            size="lg"
+                            width='20em'
+                            id="email"
+                            type="email"
+                            labelPlaceholder='Your Email'
+                            contentLeft={<Mail fill="currentColor" />}
 
-                <ValidationError
-                    prefix="Message"
-                    field="message"
-                    errors={state.errors}
-                />
+                        />
+                    </div>
+                    <div className='d-flex justify-content-center align-items-center m-3 mt-5'>
 
-                <button type="submit" disabled={state.submitting}>
-                    Submit
-                </button>
-            </form>
-        </div>
+                        <Textarea
+                            bordered
+                            color="secondary"
+                            labelPlaceholder="Your Query"
+                            width='20em'
+                        />
+                    </div>
+                    <Button shadow color="secondary" size="lg" className='mx-auto mt-4'>submit</Button>
+                </form>
+            </div>
+        </>
     )
 }
 

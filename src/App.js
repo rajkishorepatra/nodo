@@ -19,7 +19,7 @@ function App() {
 
   const deleteNote=(id)=>{
     const tempNotes=[...notes]
-    const index = tempNotes.findIndex(item=>item.id==id)
+    const index = tempNotes.findIndex(item=>item.id===id)
     if(index<0) return;
     tempNotes.splice(index,1);
     setNotes(tempNotes);
