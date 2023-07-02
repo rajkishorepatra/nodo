@@ -6,17 +6,33 @@ import bar from '../img/bar.png'
 import DashType from '../components/dashboard/DashType';
 import Notes from '../components/notes/Notes';
 import Todos from '../components/todos/Todos';
-
+import { signOut } from 'firebase/auth';
+import { auth } from '../firebase_config';
 
 function Dashboard() {
     const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
+
+    function logOut() {
+        signOut(auth)
+            .then(localStorage.removeItem('user'))
+            .then(window.location = '/');
+        handleClose();
+    }
+
+    function checkUser() {
+        var data = localStorage.user || null;
+        if (data === null) {
+            alert("Login to start adding notes");
+            window.location = "/";
+        }
+    }
     return (
         <>
 
-            <Navbar isBordered variant="floating">
+            <Navbar isBordered variant="floating" onLoad={checkUser}>
                 <Navbar.Brand
                     css={{
                         "@xs": {
@@ -55,6 +71,9 @@ function Dashboard() {
                                     </Nav.Item>
                                     <Nav.Item>
                                         <Nav.Link eventKey="third" onClick={handleClose}>Todos</Nav.Link>
+                                    </Nav.Item>
+                                    <Nav.Item>
+                                        <Nav.Link eventKey="third" onClick={logOut}>LogOut</Nav.Link>
                                     </Nav.Item>
                                 </Nav>
                             </Col>

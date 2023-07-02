@@ -32,7 +32,7 @@ function Feedback() {
                             color="primary"
                             size="lg"
                             width='20em'
-                            id="email"
+                            // id="email"
                             type="email"
                             labelPlaceholder='Your Email'
                             contentLeft={<Mail fill="currentColor" />}
