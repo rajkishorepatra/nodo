@@ -3,7 +3,7 @@ import { Navbar, Link, Text, Modal, Button, Input, Row } from "@nextui-org/react
 import { Mail } from "./Mail";
 import { Password } from "./Password";
 import favicon from '../../img/favicon.png'
-import { UserIcon } from './UserIcon';
+
 
 function BarNav() {
 
@@ -154,15 +154,6 @@ function BarNav() {
                     </Text>
                 </Modal.Header>
                 <Modal.Body>
-                    <Input
-                        clearable
-                        bordered
-                        fullWidth
-                        color="primary"
-                        size="lg"
-                        placeholder="Name"
-                    contentLeft={<UserIcon fill="currentColor" />}
-                    />
                     <Input
                         clearable
                         bordered
