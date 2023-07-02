@@ -6,14 +6,18 @@ import './index.css';
 import HeroPg from './pages/HeroPg'
 
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Dashboard from './pages/Dashboard';
+import { Routes, Route, BrowserRouter } from 'react-router-dom';
 
 
 ReactDOM.render(
-  <React.StrictMode>
+  <BrowserRouter>
     <NextUIProvider>
-      <HeroPg />
-      {/* <App /> */}
+      <Routes>
+        <Route index element={<HeroPg />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+      </Routes>
     </NextUIProvider>
-  </React.StrictMode>,
+  </BrowserRouter>,
   document.getElementById('root')
 );

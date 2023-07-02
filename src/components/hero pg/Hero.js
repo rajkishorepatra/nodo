@@ -1,6 +1,6 @@
 import React from 'react'
 import notegif from '../../img/notes.gif'
-import { Button } from '@nextui-org/react'
+import { Button, Link } from '@nextui-org/react'
 
 function Hero() {
     return (
@@ -10,7 +10,18 @@ function Hero() {
                 <div className='hero-text'>
                     <h1>Welcome to Nodo.</h1>
                     <h3>Your one stop destination for Notes and Todos!</h3>
-                    <Button size="lg" color="gradient" shadow bordered ghost className='mt-5 mx-auto'>Add Notes/Todos</Button>
+                    <Link href='/dashboard' className='d-flex mx-auto'>
+                        <Button
+                            size="lg"
+                            color="gradient"
+                            shadow
+                            bordered
+                            ghost
+                            className='mt-5'
+                        >
+                            Add Notes/Todos
+                        </Button>
+                    </Link>
                 </div>
             </div>
         </>

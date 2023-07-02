@@ -1,0 +1,23 @@
+.notes-text{
+    background: -webkit-linear-gradient(45deg, darkblue, pink);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+}
+
+.notes-inp{
+    width: 50vw;
+}
+
+.todo-inp{
+    width: 35vw;
+}
+
+@media screen and (max-width:700px) {
+    .notes-inp{
+        width: 40vh;
+    }
+    .todo-inp{
+        width: 25vh;
+    }
+}
