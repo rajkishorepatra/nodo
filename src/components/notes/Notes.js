@@ -9,19 +9,21 @@ import '../../CSS/notes/notes.css'
 
 
 const CardNotes = (props) => {
+
     var urlImg = "https://source.unsplash.com/400x300/?" + props.title;
+
     const deleteData = async (documentId) => {
         const docRef = doc(db, 'Notes', documentId);
 
         try {
             await deleteDoc(docRef);
-            console.log('Document successfully deleted!');
         } catch (error) {
             console.error('Error deleting document:', error);
         }
         var gfg_down = document.getElementById(props.keyId);
         gfg_down.parentNode.removeChild(gfg_down);
     };
+
     return (
         <>
             <Grid xs={10} sm={4} id={props.keyId}>
@@ -72,8 +74,9 @@ function Notes() {
         var title = document.getElementById("title").value;
         var text = document.getElementById("text").value;
         var id = auth.currentUser.uid;
+        var docId = generatePin();
         if (title !== "" && text !== "") {
-            setDoc(doc(db, "Notes", generatePin()), {
+            setDoc(doc(db, "Notes", docId), {
                 uid: id,
                 todo_title: title,
                 todo_body: text,
@@ -87,7 +90,7 @@ function Notes() {
         }
         document.getElementById("title").value = "";
         document.getElementById("text").value = "";
-        setInputList(inputList.concat(<CardNotes title={title} text={text} />));
+        setInputList(inputList.concat(<CardNotes title={title} text={text} keyId={docId} />));
     }
 
 

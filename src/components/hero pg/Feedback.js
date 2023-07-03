@@ -32,7 +32,6 @@ function Feedback() {
                             color="primary"
                             size="lg"
                             width='20em'
-                            // id="email"
                             type="email"
                             labelPlaceholder='Your Email'
                             contentLeft={<Mail fill="currentColor" />}
@@ -40,7 +39,6 @@ function Feedback() {
                         />
                     </div>
                     <div className='d-flex justify-content-center align-items-center m-3 mt-5'>
-
                         <Textarea
                             bordered
                             color="secondary"
@@ -48,7 +46,7 @@ function Feedback() {
                             width='20em'
                         />
                     </div>
-                    <Button shadow color="secondary" size="lg" className='mx-auto mt-4'>submit</Button>
+                    <Button shadow color="secondary" size="lg" className='mx-auto mt-4'>Submit</Button>
                 </form>
             </div>
         </>

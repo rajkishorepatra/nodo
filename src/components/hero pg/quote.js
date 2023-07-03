@@ -17,8 +17,8 @@ function Quote() {
   }
   return (
     <>
-      <div class="container mx-auto p-4">
-        <div class="content">
+      <div className="container mx-auto p-4">
+        <div className="content">
           <h2>{quote.content}</h2>
           <h3>- {quote.author}</h3>
           <button className='button' onClick={fetchData}>Random quote<span></span></button>

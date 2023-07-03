@@ -11,9 +11,9 @@ function HeroPg() {
         <>
             <BarNav />
             <Hero />
-            <Quote/>
-            <About/>
-            <Feedback/>
+            <Quote />
+            <About />
+            <Feedback />
         </>
     )
 }

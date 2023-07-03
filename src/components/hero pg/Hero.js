@@ -8,8 +8,8 @@ function Hero() {
         if (data === null) {
             alert("Login to start adding notes");
         }
-        else{
-            window.location='/dashboard'
+        else {
+            window.location = '/dashboard'
         }
     }
     return (
@@ -19,19 +19,17 @@ function Hero() {
                 <div className='hero-text'>
                     <h1>Welcome to Nodo.</h1>
                     <h3>Your one stop destination for Notes and Todos!</h3>
-                    {/* <Link href='/dashboard' className='d-flex mx-auto'> */}
-                        <Button
-                            size="lg"
-                            color="gradient"
-                            shadow
-                            bordered
-                            ghost
-                            className='mt-5 mx-auto'
-                            onPress={checkUser}
-                        >
-                            Add Notes/Todos
-                        </Button>
-                    {/* </Link> */}
+                    <Button
+                        size="lg"
+                        color="gradient"
+                        shadow
+                        bordered
+                        ghost
+                        className='mt-5 mx-auto'
+                        onPress={checkUser}
+                    >
+                        Add Notes/Todos
+                    </Button>
                 </div>
             </div>
         </>

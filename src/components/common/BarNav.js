@@ -13,13 +13,12 @@ function BarNav() {
     const handler = () => setVisible(true);
     const closeHandler = () => {
         setVisible(false);
-        console.log("closed");
     };
+
     const [visibleSignUp, setVisibleSignUp] = React.useState(false);
     const handlerSignUp = () => setVisibleSignUp(true);
     const closeSignUp = () => {
         setVisibleSignUp(false);
-        console.log("closed");
     };
 
     function forgotPass() {
@@ -29,7 +28,7 @@ function BarNav() {
                 alert("Reset link sent to your email id!")
             })
             .catch((error) => {
-                console.log(error.message)
+                alert(error.message)
             })
     }
 
@@ -40,7 +39,7 @@ function BarNav() {
             .then((user) => localStorage.setItem("user", JSON.stringify(user.user)))
             .then(() => window.location = "/dashboard")
             .catch((error) => {
-                console.log(error.message);
+                alert(error.message);
             })
         closeHandler();
     }
@@ -55,7 +54,7 @@ function BarNav() {
             .then((user) => localStorage.setItem("user", JSON.stringify(user.user)))
             .then(() => window.location = "/dashboard")
             .catch((error) => {
-                console.log(error.message);
+                alert(error.message);
             })
         closeSignUp();
     }
@@ -66,7 +65,6 @@ function BarNav() {
         var data = localStorage.user;
         if (data)
             return true;
-
         return false;
     }
 
@@ -182,27 +180,31 @@ function BarNav() {
                     </Text>
                 </Modal.Header>
                 <Modal.Body>
-                    <Input
-                        clearable
-                        bordered
-                        fullWidth
-                        color="primary"
-                        size="lg"
-                        labelPlaceholder="Email"
-                        contentLeft={<Mail fill="currentColor" />}
-                        id='email'
-                        name='email'
-                    />
-                    <Input.Password
-                        clearable
-                        bordered
-                        fullWidth
-                        color="primary"
-                        size="lg"
-                        placeholder="Password"
-                        contentLeft={<Password fill="currentColor" />}
-                        id='password'
-                    />
+                    <div className='my-3'>
+                        <Input
+                            clearable
+                            bordered
+                            fullWidth
+                            color="primary"
+                            size="lg"
+                            labelPlaceholder="Email"
+                            contentLeft={<Mail fill="currentColor" />}
+                            id='email'
+                            name='email'
+                        />
+                    </div>
+                    <div className='my-3'>
+                        <Input.Password
+                            clearable
+                            bordered
+                            fullWidth
+                            color="primary"
+                            size="lg"
+                            labelPlaceholder="Password"
+                            contentLeft={<Password fill="currentColor" />}
+                            id='password'
+                        />
+                    </div>
                     <Row justify="space-between">
                         <Text size={14}><Link href='#' onPress={handlerSignUp}>Don't have Account?</Link></Text>
                         <Text size={14}><Link href='#' onPress={forgotPass}>Forgot password?</Link></Text>
@@ -237,36 +239,42 @@ function BarNav() {
                     </Text>
                 </Modal.Header>
                 <Modal.Body>
+                <div className='my-3'>
                     <Input
                         clearable
                         bordered
                         fullWidth
                         color="primary"
                         size="lg"
-                        placeholder="Email"
+                        labelPlaceholder="Email"
                         contentLeft={<Mail fill="currentColor" />}
                         id='emailCreate'
                     />
+                    </div>
+                    <div className='my-3'>
                     <Input.Password
                         clearable
                         bordered
                         fullWidth
                         color="primary"
                         size="lg"
-                        placeholder="Password"
+                        labelPlaceholder="Password"
                         contentLeft={<Password fill="currentColor" />}
                         id='passCreate'
                     />
+                    </div>
+                    <div className='my-3'>
                     <Input.Password
                         clearable
                         bordered
                         fullWidth
                         color="primary"
                         size="lg"
-                        placeholder="Password Again"
+                        labelPlaceholder="Password Again"
                         contentLeft={<Password fill="currentColor" />}
                         id='passCreateCheck'
                     />
+                    </div>
                     <Text size={14}><Link href='#' onPress={handler}>Already have Account?</Link></Text>
                 </Modal.Body>
                 <Modal.Footer>
