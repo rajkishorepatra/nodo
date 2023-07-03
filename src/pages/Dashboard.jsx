@@ -73,8 +73,8 @@ function Dashboard() {
                                     <Nav.Item>
                                         <Nav.Link eventKey="third" onClick={handleClose}>Todos</Nav.Link>
                                     </Nav.Item>
-                                    <Nav.Item>
-                                        <Nav.Link eventKey="third" onClick={logOut}>LogOut</Nav.Link>
+                                    <Nav.Item className='bottom-0 position-absolute mb-4'>
+                                        <Nav.Link eventKey="third" onClick={logOut}><b>LogOut</b></Nav.Link>
                                     </Nav.Item>
                                 </Nav>
                             </Col>
